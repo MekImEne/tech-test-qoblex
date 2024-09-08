@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace BundleTree.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial_Create : Migration
+    public partial class Initial_create : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -14,10 +15,8 @@ namespace BundleTree.Migrations
                 name: "Bundles",
                 columns: table => new
                 {
-                    BundleId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    BundleName = table.Column<string>(type: "TEXT", nullable: false),
-                    RequiredUnits = table.Column<int>(type: "INTEGER", nullable: false)
+                    BundleId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    BundleName = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -28,8 +27,7 @@ namespace BundleTree.Migrations
                 name: "Products",
                 columns: table => new
                 {
-                    ProductId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                    ProductId = table.Column<Guid>(type: "TEXT", nullable: false),
                     ProductName = table.Column<string>(type: "TEXT", nullable: false),
                     Stock = table.Column<int>(type: "INTEGER", nullable: false)
                 },
@@ -42,11 +40,10 @@ namespace BundleTree.Migrations
                 name: "BundleParts",
                 columns: table => new
                 {
-                    BundlePartId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    BundleId = table.Column<int>(type: "INTEGER", nullable: false),
-                    ProductId = table.Column<int>(type: "INTEGER", nullable: true),
-                    SubBundleId = table.Column<int>(type: "INTEGER", nullable: true),
+                    BundlePartId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    BundleId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    ProductId = table.Column<Guid>(type: "TEXT", nullable: true),
+                    SubBundleId = table.Column<Guid>(type: "TEXT", nullable: true),
                     RequiredUnits = table.Column<int>(type: "INTEGER", nullable: false),
                     Type = table.Column<int>(type: "INTEGER", nullable: false)
                 },

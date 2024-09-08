@@ -50,7 +50,6 @@ namespace BundleTree.Services
             context.Bundles.AddRange(bundles);
             context.SaveChanges();
 
-            // Define bundle parts with explicit GUIDs
             var bundleParts = new List<BundlePart>
             {
                 new BundlePart { BundlePartId = Guid.NewGuid(), BundleId = bundleIds[0], SubBundleId = bundleIds[1], RequiredUnits = 2, Type = PartType.Bundle },
@@ -98,7 +97,8 @@ namespace BundleTree.Services
             {
                 Guid.NewGuid(), // P0
                 Guid.NewGuid(), // P1
-                Guid.NewGuid()  // P1a
+                Guid.NewGuid(),  // P1a
+                Guid.NewGuid()  // P1b
             };
 
             var bundles = new List<Bundle>
@@ -110,7 +110,6 @@ namespace BundleTree.Services
             context.Bundles.AddRange(bundles);
             context.SaveChanges();
 
-            // Define bundle parts with explicit GUIDs
             var bundleParts = new List<BundlePart>
             {
                 new BundlePart { BundlePartId = Guid.NewGuid(), BundleId = bundleIds[0], SubBundleId = bundleIds[1], RequiredUnits = 2, Type = PartType.Bundle },
@@ -121,7 +120,7 @@ namespace BundleTree.Services
                 new BundlePart { BundlePartId = Guid.NewGuid(), BundleId = bundleIds[1], ProductId = productIds[4], RequiredUnits = 3, Type = PartType.Product },
 
                 new BundlePart { BundlePartId = Guid.NewGuid(), BundleId = bundleIds[2], ProductId = productIds[5], RequiredUnits = 1, Type = PartType.Product },
-                new BundlePart { BundlePartId = Guid.NewGuid(), BundleId = bundleIds[2], ProductId = productIds[6], RequiredUnits = 1, Type = PartType.Product }
+                new BundlePart { BundlePartId = Guid.NewGuid(), BundleId = bundleIds[2], ProductId = productIds[6], RequiredUnits = 1, Type = PartType.Product },
             };
             context.BundleParts.AddRange(bundleParts);
             context.SaveChanges();

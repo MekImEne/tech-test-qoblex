@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BundleTree.Migrations
 {
     [DbContext(typeof(BundleContext))]
-    [Migration("20240908145238_Initial_Create")]
-    partial class Initial_Create
+    [Migration("20240908173355_Initial_create")]
+    partial class Initial_create
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,16 +22,13 @@ namespace BundleTree.Migrations
 
             modelBuilder.Entity("BundleTree.Models.Bundle", b =>
                 {
-                    b.Property<int>("BundleId")
+                    b.Property<Guid>("BundleId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("BundleName")
                         .IsRequired()
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("RequiredUnits")
-                        .HasColumnType("INTEGER");
 
                     b.HasKey("BundleId");
 
@@ -40,21 +37,21 @@ namespace BundleTree.Migrations
 
             modelBuilder.Entity("BundleTree.Models.BundlePart", b =>
                 {
-                    b.Property<int>("BundlePartId")
+                    b.Property<Guid>("BundlePartId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("TEXT");
 
-                    b.Property<int>("BundleId")
-                        .HasColumnType("INTEGER");
+                    b.Property<Guid>("BundleId")
+                        .HasColumnType("TEXT");
 
-                    b.Property<int?>("ProductId")
-                        .HasColumnType("INTEGER");
+                    b.Property<Guid?>("ProductId")
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("RequiredUnits")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("SubBundleId")
-                        .HasColumnType("INTEGER");
+                    b.Property<Guid?>("SubBundleId")
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Type")
                         .HasColumnType("INTEGER");
@@ -72,9 +69,9 @@ namespace BundleTree.Migrations
 
             modelBuilder.Entity("BundleTree.Models.Product", b =>
                 {
-                    b.Property<int>("ProductId")
+                    b.Property<Guid>("ProductId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ProductName")
                         .IsRequired()

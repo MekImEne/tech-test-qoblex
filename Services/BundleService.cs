@@ -64,7 +64,7 @@ namespace BundleTree.Services
                     }
                 }
 
-                maxBundles = System.Math.Min(maxBundles, availableUnits);
+                maxBundles = Math.Min(maxBundles, availableUnits);
             }
 
             Console.WriteLine($"Maximum number of {bundle.BundleName} that can be constructed: {maxBundles}");

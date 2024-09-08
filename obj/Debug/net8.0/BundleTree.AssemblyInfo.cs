@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BundleTree")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c55690fec2dbc1ed58f3f5b6225b34154a0c0fac")]
 [assembly: System.Reflection.AssemblyProductAttribute("BundleTree")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BundleTree")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

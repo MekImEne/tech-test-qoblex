@@ -19,23 +19,26 @@
 
 - The maximum number of constructed bundles is depending directly on the available stock and required quantity of the sub-products.
 Means :
-    -- The availability of required quantity in stock allows to construct a new bundle.
-    -- Once one of the products is not available we can't construct another more bundle.
+  - The availability of required quantity in stock allows to construct a new bundle.
+
+  - Once one of the products is not available we can't construct another more bundle.
 
 ### Algorithm
 
 - The suitable algorithm that fit our problem is Depth-First Search (DFS) : in term of simplicity and performance, it allows to traverse the tree nodes deeply (until leaf node) before passing to another node, so we can handle nested structures (bundles that contains other bundles). Besides, before calculating the max possible built bunsles, we insure that all subproducts are available.
 
 - The key logic is :
-    -- To iterate through the bundle products (by traversing the tree from top to bottom).
-    -- For each product, We calculate how many times it can be used in construction (available stock/required quantity).
-    -- Finally, a BUNDLE can only be built as long as all required PRODUCTS are available => the limitation is related to the least available product => the min calculated value.
+  - To iterate through the bundle products (by traversing the tree from top to bottom).
+
+  - For each product, We calculate how many times it can be used in construction (available stock/required quantity).
+
+  - Finally, a BUNDLE can only be built as long as all required PRODUCTS are available => the limitation is related to the least available product => the min calculated value.
 
 ### Technology
 
 - Prerequisites
-    -- install .net 8 (executable)
-    -- dotnet tool install --global dotnet-ef
+  - install .net 8 (executable)
+  - dotnet tool install --global dotnet-ef
 
 - Project Init process
 
