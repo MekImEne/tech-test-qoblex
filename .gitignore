@@ -1,0 +1,17 @@
+# .NET build folders
+bin/
+obj/
+
+# Output files
+*.dll
+*.exe
+*.log
+
+# Local database files
+*.db
+*.db-*
+
+# IDE-specific files
+.vscode/
+.idea/
+

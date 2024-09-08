@@ -1,0 +1,26 @@
+Constructing bundle: bike
+Product frame: Stock = 60, Required = 1, Can make = 60
+Product tube: Stock = 35, Required = 1, Can make = 35
+Maximum number of wheels that can be constructed: 35
+Sub-bundle wheels: Can make = 17
+Product seat: Stock = 50, Required = 1, Can make = 50
+Product pedal: Stock = 60, Required = 2, Can make = 30
+Maximum number of bike that can be constructed: 17
+***************************************************************
+Constructing bundle: P0
+Product P1a1: Stock = 20, Required = 1, Can make = 20
+Product P1a2: Stock = 20, Required = 1, Can make = 20
+Maximum number of P1a that can be constructed: 20
+Sub-bundle P1a: Can make = 20
+Product P1a1: Stock = 20, Required = 1, Can make = 20
+Product P1a2: Stock = 20, Required = 1, Can make = 20
+Maximum number of P1a that can be constructed: 20
+Sub-bundle P1a: Can make = 10
+Product P1b: Stock = 30, Required = 3, Can make = 10
+Maximum number of P1 that can be constructed: 10
+Sub-bundle P1: Can make = 5
+Product P1a1: Stock = 20, Required = 1, Can make = 20
+Product P1a2: Stock = 20, Required = 1, Can make = 20
+Maximum number of P1a that can be constructed: 20
+Sub-bundle P1a: Can make = 20
+Maximum number of P0 that can be constructed: 5
